@@ -7,8 +7,6 @@ import {
   Burger,
   Paper,
   Transition,
-  Menu,
-  Center,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { Link } from "gatsby";
@@ -16,19 +14,8 @@ import colors from "../../styles/colors";
 
 const HEADER_HEIGHT = 110;
 
-// const useStylesMenu = createStyles((theme) => ({
-//   itemLabel: {
-//     padding: "5px",
-//   },
-//   link: {
-//     color: theme.colors.gray[7],
-//   },
-// }));
-
 const useStyles = createStyles((theme) => ({
   root: {
-    // position: "relative",
-    // zIndex: 1,
     backgroundColor: colors.blueDark,
   },
 
@@ -110,39 +97,7 @@ export function Header({ links }: HeaderResponsiveProps) {
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
 
-  // const { classes: classesMenu } = useStylesMenu();
-
   const items = links.map((link) => {
-    // const menuItems = link.links?.map((item) => (
-    //   <Menu.Item key={item.link}>
-    //     <Link className={classesMenu.link} to={item.link}>
-    //       {item.label}
-    //     </Link>
-    //   </Menu.Item>
-    // ));
-
-    // if (menuItems) {
-    //   return (
-    //     <Menu
-    //       classNames={classesMenu}
-    //       key={link.label}
-    //       trigger="hover"
-    //       exitTransitionDuration={0}
-    //     >
-    //       <Menu.Target>
-    //         <Link to={link.link}>
-    //           <Center>
-    //             {/* this should be displayed as a regular link with no sub items */}
-    //             <span className={classes.link}>{link.label}</span>
-    //             {/* <IconChevronDown size={12} stroke={1.5} /> */}
-    //           </Center>
-    //         </Link>
-    //       </Menu.Target>
-    //       <Menu.Dropdown>{menuItems}</Menu.Dropdown>
-    //     </Menu>
-    //   );
-    // }
-
     return (
       <Link
         key={link.label}
