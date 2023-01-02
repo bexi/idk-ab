@@ -9,7 +9,7 @@ import {
   Transition,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { Link } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import colors from "../../styles/colors";
 
 const HEADER_HEIGHT = 110;
@@ -90,12 +90,23 @@ interface HeaderResponsiveProps {
     label: string;
     links?: { link: string; label: string }[];
   }[];
+  activePath?: string;
 }
 
-export function Header({ links }: HeaderResponsiveProps) {
+export function Header({ links, activePath }: HeaderResponsiveProps) {
   const [opened, { toggle, close }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
+
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      site {
+        siteMetadata {
+          title
+          siteUrl
+        }
+      }
+    }
+  `);
 
   const items = links.map((link) => {
     return (
@@ -103,7 +114,7 @@ export function Header({ links }: HeaderResponsiveProps) {
         key={link.label}
         to={link.link}
         className={cx(classes.link, {
-          [classes.linkActive]: active === link.link,
+          [classes.linkActive]: activePath === link.link,
         })}
       >
         {link.label}

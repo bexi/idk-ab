@@ -2,12 +2,13 @@ import React from "react";
 import Layout from "../components/layout/Layout";
 import { Container, Space, Text, Title } from "@mantine/core";
 import colors from "../styles/colors";
+import { PageProps } from "gatsby";
 
 export const phoneNr = "+46707410325";
 
-export default function Coaching() {
+export default function Coaching({ location }: PageProps) {
   return (
-    <Layout>
+    <Layout location={location}>
       <Container size="md">
         <Title order={1} color={colors.black}>
           Vad är coaching?

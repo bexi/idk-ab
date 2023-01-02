@@ -2,11 +2,11 @@ import React from "react";
 import Layout from "../components/layout/Layout";
 import { Card, Center, Container, Space, Text, Title } from "@mantine/core";
 import colors from "../styles/colors";
-import { Script } from "gatsby";
+import { PageProps, Script } from "gatsby";
 
-export default function Contact() {
+export default function Contact({ location }: PageProps) {
   return (
-    <Layout>
+    <Layout location={location}>
       <Container size="md">
         <Title order={1} color={colors.black}>
           Om Karin

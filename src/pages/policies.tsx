@@ -2,10 +2,11 @@ import React from "react";
 import Layout from "../components/layout/Layout";
 import { Container, Space, Text, Title } from "@mantine/core";
 import colors from "../styles/colors";
+import { PageProps } from "gatsby";
 
-export default function Prices() {
+export default function Prices({ location }: PageProps) {
   return (
-    <Layout>
+    <Layout location={location}>
       <Container size="md">
         <Title order={1} color={colors.black}>
           Integritetspolicy enligt GDPR

@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../styles/global.css";
 import { AppShell, Footer, List, Text, useMantineTheme } from "@mantine/core";
 import { Header as MyHeader } from "../header/Header";
 import colors from "../../styles/colors";
 import { Link } from "gatsby";
-import { ListItem } from "@mantine/core/lib/List/ListItem/ListItem";
+import { WindowLocation } from "@reach/router";
 
-export default function Layout({ children }: { children: JSX.Element }) {
+type LayoutProps = { children: JSX.Element; location: WindowLocation };
+
+export default function Layout({ children, location }: LayoutProps) {
   const theme = useMantineTheme();
   return (
     <AppShell
@@ -37,14 +39,15 @@ export default function Layout({ children }: { children: JSX.Element }) {
         <MyHeader
           links={[
             { link: "/", label: "Hem" },
-            { link: "/about-karin", label: "Om Karin" },
-            { link: "/how-does-it-work", label: "Hur funkar det" },
-            { link: "/coaching", label: "Vad är coaching?" },
+            { link: "/about-karin/", label: "Om Karin" },
+            { link: "/how-does-it-work/", label: "Hur funkar det?" },
+            { link: "/coaching/", label: "Vad är coaching?" },
             {
-              link: "/contact",
+              link: "/contact/",
               label: "Kontakt",
             },
           ]}
+          activePath={location.pathname}
         />
       }
     >

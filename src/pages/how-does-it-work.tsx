@@ -2,12 +2,12 @@ import React from "react";
 import Layout from "../components/layout/Layout";
 import { Center, Container, List, Space, Text, Title } from "@mantine/core";
 import colors from "../styles/colors";
-import { Link } from "gatsby";
+import { Link, PageProps } from "gatsby";
 import { phoneNr } from "./contact";
 
-export default function Prices() {
+export default function HowDoesItWork({ location }: PageProps) {
   return (
-    <Layout>
+    <Layout location={location}>
       <Container size="md">
         <Title order={1} color={colors.black}>
           Hur går det till?

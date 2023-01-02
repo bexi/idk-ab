@@ -1,25 +1,22 @@
 import {
   Center,
   Container,
-  Grid,
-  Group,
   SimpleGrid,
-  Skeleton,
   Space,
   Stack,
   Text,
   Title,
-  useMantineTheme,
 } from "@mantine/core";
 import React from "react";
 import Layout from "../components/layout/Layout";
 import colors from "../styles/colors";
+import { WindowLocation } from "@reach/router";
 
-const PRIMARY_COL_HEIGHT = 300;
+export type PageProps = { location: WindowLocation };
 
-export default function Home() {
+export default function Home({ location }: PageProps) {
   return (
-    <Layout>
+    <Layout location={location}>
       <Container size="xl">
         <SimpleGrid
           cols={2}
