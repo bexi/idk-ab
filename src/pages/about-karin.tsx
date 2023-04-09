@@ -1,6 +1,14 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
-import { Card, Center, Container, Space, Text, Title } from "@mantine/core";
+import {
+  Anchor,
+  Card,
+  Center,
+  Container,
+  Space,
+  Text,
+  Title,
+} from "@mantine/core";
 import colors from "../styles/colors";
 import { PageProps, Script } from "gatsby";
 
@@ -9,15 +17,27 @@ export default function Contact({ location }: PageProps) {
     <Layout location={location}>
       <Container size="md">
         <Title order={1} color={colors.black}>
-          Om Karin
+          Om I.D.K AB
         </Title>
         <Space h="md" />
         <Text color={colors.black}>
-          Jag började tidigt arbeta med människor och har sedan min examen från
-          Personal och -arbetslivsprogrammet 2004 arbetat i olika roller inom
-          HR. För mig är det oerhört meningsfullt och värdeskapande att få bidra
-          till att utveckla ledare och medarbetare genom att både kunna stötta
-          och utmana dem.
+          I.D.K AB grundades 2022 och drivs av Karin Jannerborn som erbjuder
+          professionell samtalscoaching och förändringsledning till
+          privatpersoner och organisationer. I.D.K AB är verksamt i centrala
+          Göteborg men med hjälp av digitala möten kan du som klient befinna dig
+          precis var som helst. Karin började tidigt arbeta med människor och
+          har sedan examen från Personal och -arbetslivsprogrammet 2004 arbetat
+          i olika roller inom HR och ledarutveckling. ”För mig är det oerhört
+          meningsfullt och värdeskapande att få bidra till att utveckla
+          individer genom att både kunna stötta och utmana dem att hitta sin
+          inre drivkraft och det som är viktigt för dem. Mitt intresse för
+          personlig utveckling i form av professionell coaching ledde mig 2020
+          till Gothia Akademi och tre terminer studier med fokus på
+          Katalyserande coaching och Förändringsledning. Jag är Diplomerad
+          Professionell Coach och Certifierad Förändringsledare och arbetar
+          enlig riktlinjerna satta av International Coach Federation (ICF). Som
+          bevis på min erfarenhet och kompetens innehar jag sedan 2022 ICF
+          certifiering (ACC).”
         </Text>
         <Space h="md" />
         <Text color={colors.black}>
@@ -36,10 +56,13 @@ export default function Contact({ location }: PageProps) {
         </Title>
         <Space h="md" />
         <Text color={colors.black}>
-          Min filosofi är att vi utvecklas som individer hela livet och om vi
+          "Min filosofi är att vi utvecklas som individer hela livet och om vi
           aktivt tar ansvar för den utvecklingen kan vi nå hur långt som helst.
           Som coach är mitt fokus att du ska nå din fulla potential genom att ta
-          kontrollen över ditt liv, bli den du vill vara och nå dina mål!
+          kontrollen över ditt liv, bli den du vill vara och nå dina mål! Som
+          min klient kan du förvänta dig att jag med lyhördhet och stort hjärta
+          utmanar dig att ta de steg som du behöver för att göra den förändring
+          du vill få till."
         </Text>
         <Space h="md" />
 
@@ -49,14 +72,11 @@ export default function Contact({ location }: PageProps) {
         <Space h="md" />
         <Text color={colors.black}>
           En ICF certifierad coach garanterar kvalitet och seriositet. Läs gärna
-          mer om ICF på deras hemsida{" "}
-          <a
-            style={{ color: "black" }}
-            href="https://coachingfederation.se/"
-            target="_blank"
-          >
-            https://coachingfederation.se
-          </a>
+          mer om ICF på deras{" "}
+          <Anchor href="https://coachingfederation.se/" target="_blank">
+            hemsida
+          </Anchor>
+          .
         </Text>
         <Space h="md" />
 

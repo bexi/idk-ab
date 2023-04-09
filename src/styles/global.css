@@ -11,20 +11,10 @@ html, body {
   min-height: 100%;
 
   /* CSS HEX */
---black: #14080eff;
---blue-dark: #2e4970ff;
---blue-light: #3b6aa1ff;
---blue-light: #488ad1ff;
---pink-medium: #d6b6e0ff;
---pink-light: #eabce2ff;
-
-/* CSS HSL */
-/* --xiketic: hsla(330, 43%, 5%, 1);
---y-in-mn-blue: hsla(215, 42%, 31%, 1);
---queen-blue: hsla(212, 46%, 43%, 1);
---tufts-blue: hsla(211, 60%, 55%, 1);
---pink-lavender: hsla(286, 40%, 80%, 1);
---pink-lavender-2: hsla(310, 52%, 83%, 1); */
+--black: #1d2124;
+--blue-dark:  rgb(213, 220, 222);
+--blue-light: rgb(213, 220, 222);
+--blue-main: rgb(91, 139, 149);
 
 }
 body {

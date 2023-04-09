@@ -27,10 +27,14 @@ export default function Layout({ children, location }: LayoutProps) {
         >
           <List style={{ float: "right", listStyle: "none" }}>
             <List.Item>
-              <Link to="/contact">Kontakt</Link>
+              <Link to="/contact">
+                <Text color={colors.blueMain}>Kontakt</Text>
+              </Link>
             </List.Item>
             <List.Item>
-              <Link to="/policies">Integritetspolicy</Link>
+              <Link to="/policies">
+                <Text color={colors.blueMain}>Integritetspolicy</Text>
+              </Link>
             </List.Item>
           </List>
         </Footer>
@@ -39,12 +43,12 @@ export default function Layout({ children, location }: LayoutProps) {
         <MyHeader
           links={[
             { link: "/", label: "Hem" },
-            { link: "/about-karin/", label: "Om Karin" },
-            { link: "/how-does-it-work/", label: "Hur funkar det?" },
+            { link: "/about-karin/", label: "Om I.D.K AB" },
+            { link: "/how-does-it-work/", label: "Hur går det till?" },
             { link: "/coaching/", label: "Vad är coaching?" },
             {
               link: "/contact/",
-              label: "Kontakt",
+              label: "Kontaktuppgifter",
             },
           ]}
           activePath={location.pathname}

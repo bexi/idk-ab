@@ -3,8 +3,7 @@ const colors = {
   blueDark: "var(--blue-dark)",
   blueMedium: "var(--blue-medium)",
   blueLight: "var(--blue-light)",
-  pinkMedium: "var(--pink-medium)",
-  pinkLight: "var(--pink-light)",
+  blueMain: "var(--blue-main)",
 };
 
 export default colors;

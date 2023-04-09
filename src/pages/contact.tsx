@@ -5,19 +5,20 @@ import colors from "../styles/colors";
 import { PageProps } from "gatsby";
 
 export const phoneNr = "+46707410325";
-export const mail = "jannerborn@gmail.com";
+export const mail = "karin@idkab.org";
 
 export default function Contact({ location }: PageProps) {
   return (
     <Layout location={location}>
       <Container size="md">
         <Title order={1} color={colors.black}>
-          Kontakt uppgifter
+          Kontaktuppgifter
         </Title>
         <Space h="md" />
         <Text color={colors.black}>
           Välkommen att höra av dig via mail eller telefon för att boka tid
-          eller om du har några andra funderingar!
+          eller om du vill veta mer om hur du kan nå dina mål med hjälp av
+          coaching!
         </Text>
         <Space h="lg" />
         <Text color={colors.black}>

@@ -61,12 +61,12 @@ const useStyles = createStyles((theme) => ({
     padding: "8px 12px",
     borderRadius: theme.radius.sm,
     textDecoration: "none",
-    color: colors.pinkMedium,
+    color: colors.blueMain,
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
     "&:hover": {
-      backgroundColor: colors.pinkMedium,
+      backgroundColor: colors.blueMain,
       color: theme.colors.gray[7],
     },
 
@@ -78,7 +78,7 @@ const useStyles = createStyles((theme) => ({
 
   linkActive: {
     "&, &:hover": {
-      backgroundColor: colors.pinkMedium,
+      backgroundColor: colors.blueMain,
       color: theme.colors.gray[7],
     },
   },
@@ -126,14 +126,14 @@ export function Header({ links, activePath }: HeaderResponsiveProps) {
     <MantineHeader height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
         <Link to="/">
-          <div style={{ height: "100px" }}>
+          <div style={{ height: "70px" }}>
             <img
               style={{
                 maxWidth: "100%",
                 maxHeight: "100%",
                 objectFit: "contain",
               }}
-              src="/inre-drivkraft-logga2.png"
+              src="/I.D.K_clear_cut.png"
             />
           </div>
         </Link>

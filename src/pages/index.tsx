@@ -1,6 +1,8 @@
 import {
   Center,
   Container,
+  List,
+  Paper,
   SimpleGrid,
   Space,
   Stack,
@@ -17,7 +19,7 @@ export type PageProps = { location: WindowLocation };
 export default function Home({ location }: PageProps) {
   return (
     <Layout location={location}>
-      <Container size="xl">
+      <Container size="lg">
         <SimpleGrid
           cols={2}
           spacing="md"
@@ -27,14 +29,26 @@ export default function Home({ location }: PageProps) {
             <Stack>
               <Title color={colors.black}>Vart är du på väg?</Title>
               <Text color={colors.black}>
-                IDK AB erbjuder professionell samtalscoaching till
-                privatpersoner och organisationer. Vart är du på väg? Står du
-                inför val eller vill göra förändringar i livet? Har du
-                utmaningar i arbetslivet som du vill hantera annorlunda? Eller
-                vill du bli ännu bättre på det du redan gör? Oavsett vad du vill
-                fokusera på: din karriär, nära relationer, större eller mindre
-                förändringar i vardagen eller att identifiera din mening med
-                livet så har du kartan och kompassen inom dig!
+                Behöver du göra en förändring?
+                <br />
+                Står du eller din verksamhet inför val eller större
+                förändringar?
+                <br />
+                Har du utmaningar i livet som du vill hantera annorlunda?
+                <br />
+                Eller vill du bli ännu bättre på det du redan gör?
+              </Text>
+              <Text color={colors.black}>
+                Oavsett vad du vill fokusera på: din karriär, nära relationer,
+                större eller mindre förändringar i vardagen eller att
+                identifiera din mening med livet så har du själv kartan och
+                kompassen inom dig!
+              </Text>
+              <Text color={colors.black}>
+                I.D.K AB erbjuder Professionell samtalscoaching och
+                förändringsledning till privatpersoner och organisationer och
+                tillsammans minskar vi gapet mellan där du är och där du vill
+                vara.
               </Text>
             </Stack>
           </Center>
@@ -52,6 +66,47 @@ export default function Home({ location }: PageProps) {
             <Stack>
               <Title color={colors.black}>Utveckla din potential</Title>
               <Text color={colors.black}>
+                När är det bästa tillfället att ge sig själv några timmar med en
+                coach?
+              </Text>
+              <Text color={colors.black}>
+                Det skulle kunna vara att du har en önskan om att utforska:
+              </Text>
+              <List styles={{ item: { color: colors.black } }}>
+                <List.Item>
+                  <Text color={colors.black}>
+                    Vad är mitt nästa karriärsteg?
+                  </Text>
+                </List.Item>
+                <List.Item>
+                  <Text color={colors.black}>
+                    Hur vill jag förhålla mig till mig själv och andra?
+                  </Text>
+                </List.Item>
+                <List.Item>
+                  <Text color={colors.black}>
+                    Vilken livsstils förändring skulle jag mål allra bäst av?
+                  </Text>
+                </List.Item>
+                <List.Item>
+                  <Text color={colors.black}>
+                    Hur får jag min vardag att gå ihop?
+                  </Text>
+                </List.Item>
+                <List.Item>
+                  <Text color={colors.black}>Vad vill jag egentligen?</Text>
+                </List.Item>
+                <List.Item>
+                  <Text color={colors.black}>
+                    Hur kan jag bli bättre på att fatta beslut?
+                  </Text>
+                </List.Item>
+              </List>
+              <Text color={colors.black}>
+                Vilka önskningar, drömmar och mål har du ännu inte vågat uttalat
+                högt?
+              </Text>
+              <Text color={colors.black}>
                 I coaching fokuserar vi på ditt nuläge och blickar framåt. Vi
                 identifierar vi vad som är viktigt på riktigt för dig och genom
                 coachingen ger du dig själv nycklarna att utveckla din
@@ -63,34 +118,32 @@ export default function Home({ location }: PageProps) {
               </Text>
             </Stack>
           </Center>
-          <Container>
-            <Title order={1} color={colors.black}>
-              Vad är coaching?
-            </Title>
-            <Space h="md" />
-            <Text color={colors.black}>
-              Coaching är en strukturerad samtalsform där coach och klient
-              tillsammans utforskar, utmanar, ser möjligheter, sorterar,
-              medvetandegör och fokuserar på det som är viktigt för att nå det
-              önskade resultat i samtalet. Coaching används för att hitta
-              lösningar på problem och göra det som är bra ännu bättre. Det
-              handlar om att hjälpa människor att hitta sina egna svar på vad de
-              vill och vad som ska till för att komma dit. Och sen få det gjort!
-            </Text>
-            <Space h="md" />
-            <Text color={colors.black}>
-              Klienten bidrar med sina tankar och erfarenheter om sig själv och
-              vad som är viktigt i det ämne för stunden är i fokus, coachen
-              lyssnar och ställer frågor för att klienten ska få utforska på
-              både det medvetna och omedvetna planet. Det samarbetet kallar vi
-              coaching. Mitt främsta verktyg som coach är att ställa kraftfulla
-              och tankeväckande frågor och hjälpa dig att ta förverkliga de
-              perspektivskapande insikter som de leder till. Det är det som du
-              ska ha mig till!
-            </Text>
-          </Container>
         </SimpleGrid>
-        <Space h="md" />
+        <Space h="xl" />
+        <Title color={colors.black}>Sagt om I.D.K l</Title>
+        <Space h="lg" />
+        <Paper shadow="xs" p="md">
+          <Text>Recension</Text>
+          <Text>
+            En recension är en redogörelse för till exempel intrycken från en
+            kulturprodukt, en vara eller en tjänst, och dess kvalitet i
+            jämförelse med andra produkter i samma klass. Recensioner kallas
+            också kritik. En kortare form av recension kallas anmälan. Den som
+            skriver recensioner kallas recensent, kritiker eller anmälare.
+          </Text>
+        </Paper>
+        <Space h="lg" />
+        <Paper shadow="xs" p="md">
+          <Text>Recension 2</Text>
+          <Text>
+            En recension är en redogörelse för till exempel intrycken från en
+            kulturprodukt, en vara eller en tjänst, och dess kvalitet i
+            jämförelse med andra produkter i samma klass. Recensioner kallas
+            också kritik. En kortare form av recension kallas anmälan. Den som
+            skriver recensioner kallas recensent, kritiker eller anmälare.
+          </Text>
+        </Paper>
+        <Space h="xl" />
       </Container>
     </Layout>
   );
