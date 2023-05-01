@@ -120,27 +120,31 @@ export default function Home({ location }: PageProps) {
           </Center>
         </SimpleGrid>
         <Space h="xl" />
-        <Title color={colors.black}>Sagt om I.D.K l</Title>
+        <Title color={colors.black}>Sagt om I.D.K</Title>
         <Space h="lg" />
         <Paper shadow="xs" p="md">
-          <Text>Recension</Text>
+          <Text fw={700}>Lena</Text>
           <Text>
-            En recension är en redogörelse för till exempel intrycken från en
-            kulturprodukt, en vara eller en tjänst, och dess kvalitet i
-            jämförelse med andra produkter i samma klass. Recensioner kallas
-            också kritik. En kortare form av recension kallas anmälan. Den som
-            skriver recensioner kallas recensent, kritiker eller anmälare.
+            "Samtalscoaching har hjälp mig att lyfta blicken när jag fastnat i
+            tankemönster. Fått mig att kunna sätta svåra situationer i
+            perspektiv."
           </Text>
         </Paper>
         <Space h="lg" />
         <Paper shadow="xs" p="md">
-          <Text>Recension 2</Text>
+          <Text fw={700}>Anette</Text>
           <Text>
-            En recension är en redogörelse för till exempel intrycken från en
-            kulturprodukt, en vara eller en tjänst, och dess kvalitet i
-            jämförelse med andra produkter i samma klass. Recensioner kallas
-            också kritik. En kortare form av recension kallas anmälan. Den som
-            skriver recensioner kallas recensent, kritiker eller anmälare.
+            "Jag har nyligen haft möjligheten att arbeta med Karin som min
+            personliga coach, och det har varit en otroligt värdefull
+            erfarenhet. När man står inför olika vägval, beslut eller utmaningar
+            kan det vara svårt att sortera sina tankar. Karins trygga, lugna och
+            metodiska vägledning hjälpte mig att skapa klarhet i mina alternativ
+            och prioriteringar för att kunna fatta mer informerade beslut. Varje
+            session är anpassad efter just dina specifika behov och mål och hon
+            skapar en trygg och icke-dömande miljö för att effektivt utforska
+            alla tankar och känslor. Kan starkt rekommendera Karins
+            coachningstjänster till alla som söker klarhet, empowerment och
+            personlig tillväxt."
           </Text>
         </Paper>
         <Space h="xl" />

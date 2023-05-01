@@ -30,27 +30,24 @@ export default function Contact({ location }: PageProps) {
           i olika roller inom HR och ledarutveckling. ”För mig är det oerhört
           meningsfullt och värdeskapande att få bidra till att utveckla
           individer genom att både kunna stötta och utmana dem att hitta sin
-          inre drivkraft och det som är viktigt för dem. Mitt intresse för
-          personlig utveckling i form av professionell coaching ledde mig 2020
-          till Gothia Akademi och tre terminer studier med fokus på
-          Katalyserande coaching och Förändringsledning. Jag är Diplomerad
-          Professionell Coach och Certifierad Förändringsledare och arbetar
-          enlig riktlinjerna satta av International Coach Federation (ICF). Som
-          bevis på min erfarenhet och kompetens innehar jag sedan 2022 ICF
-          certifiering (ACC).”
+          inre drivkraft och det som är viktigt för dem.”
         </Text>
         <Space h="md" />
         <Text color={colors.black}>
-          Mitt intresse för personlig utveckling i form av coaching ledde mig
+          "Mitt intresse för personlig utveckling i form av coaching ledde mig
           2020 till Gothia Akademi och tre terminer studier med fokus på
           Katalyserande coaching och Förändringsledning. Jag är Diplomerad
           Professionell Coach och Certifierad Förändringsledare och arbetar
           enlig riktlinjerna satta av International Coach Federation (ICF). Som
           bevis på min erfarenhet och kunskap innehar jag sedan 2022 ICF
-          certifiering (ACC).
+          certifiering (ACC)."
         </Text>
         <Space h="md" />
-
+        <img
+          src="/karin_jannerborn_profil.jpg"
+          alt="karin"
+          style={{ maxWidth: "100%" }}
+        />
         <Title order={2} color={colors.black}>
           Filosofi
         </Title>

@@ -3,7 +3,7 @@ import Layout from "../components/layout/Layout";
 import { Center, Container, List, Space, Text, Title } from "@mantine/core";
 import colors from "../styles/colors";
 import { Link, PageProps } from "gatsby";
-import { phoneNr } from "./contact";
+import { mail, phoneNr } from "./contact";
 
 export default function HowDoesItWork({ location }: PageProps) {
   return (
@@ -38,7 +38,6 @@ export default function HowDoesItWork({ location }: PageProps) {
           genomförs digitalt eller fysiskt (centrala Göteborg).
         </Text>
         <Space h="lg" />
-
         <Title order={2} color={colors.black}>
           Priser
         </Title>
@@ -61,7 +60,6 @@ export default function HowDoesItWork({ location }: PageProps) {
           </List.Item>
         </List>
         <Space h="md" />
-
         <Title order={3} color={colors.black}>
           Medarbetare
         </Title>
@@ -69,7 +67,6 @@ export default function HowDoesItWork({ location }: PageProps) {
           Samtalspaket 5 samtal 55 min 6200 kr (ex moms )
         </Text>
         <Space h="md" />
-
         <Title order={3} color={colors.black}>
           Chef och ledare
         </Title>
@@ -77,32 +74,40 @@ export default function HowDoesItWork({ location }: PageProps) {
           Samtalspaket 5 samtal 55 min 8700 kr (ex moms )
         </Text>
         <Space h="lg" />
-
         <Title order={2} color={colors.black}>
           Om och avbokningsregler
         </Title>
-        <Space h="md" />
         <Text color={colors.black}>
           Ett samtal är 55 minuter om vi inte kommit överens om annat och
-          genomförs digitalt eller fysiskt (centrala Göteborg) Om och
-          avbokningsregler Vid förhinder ringer eller sms:ar du din avbokning
-          senast 24 timmar innan bokad tid. Sen avbokning och uteblivet möte
-          debiteras. Välkommen att höra av dig via mail eller telefon för att
-          boka tid.
+          genomförs digitalt eller fysiskt (centrala Göteborg). Vid förhinder
+          ringer eller sms:ar du din avbokning senast 24 timmar innan bokad tid.
+          Sen avbokning och uteblivet möte debiteras.
         </Text>
         <Space h="md" />
-        <Text color={colors.black}>
-          Vid förhinder ringer eller sms:ar du din avbokning senast 24 timmar
-          innan bokad tid. Sen avbokning och uteblivet möte debiteras.
-        </Text>
-        <Space h="md" />
+        <Title order={2} color={colors.black}>
+          Bokning av tid
+        </Title>
         <Text color={colors.black}>
           Välkommen att höra av dig via mail eller telefon för att boka tid!
         </Text>
         <Space h="md" />
-
+        <Text color={colors.black}>
+          Telefon:{" "}
+          <a href={`tel:${phoneNr}`}>
+            <Text style={{ display: "inline" }} color={colors.black}>
+              {phoneNr}
+            </Text>
+          </a>
+        </Text>
+        <Text color={colors.black}>
+          Email:{" "}
+          <a href={`mailto:${mail}`}>
+            <Text style={{ display: "inline" }} color={colors.black}>
+              {mail}
+            </Text>
+          </a>
+        </Text>
         {/* <Text color={colors.black}>Innehar F-skatt</Text> */}
-
         {/* <Title order={3} color={colors.black}>
           Kontakt uppgifter
         </Title>
