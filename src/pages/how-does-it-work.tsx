@@ -1,11 +1,11 @@
-import React from "react";
-import Layout from "../components/layout/Layout";
-import { Center, Container, List, Space, Text, Title } from "@mantine/core";
-import colors from "../styles/colors";
-import { Link, PageProps } from "gatsby";
-import { mail, phoneNr } from "./contact";
+import React from 'react'
+import Layout from '../components/layout/Layout'
+import { Container, List, Space, Text, Title } from '@mantine/core'
+import colors from '../styles/colors'
+import { type PageProps } from 'gatsby'
+import { mail, phoneNr } from './contact'
 
-export default function HowDoesItWork({ location }: PageProps) {
+export default function HowDoesItWork ({ location }: PageProps): JSX.Element {
   return (
     <Layout location={location}>
       <Container size="md">
@@ -45,7 +45,7 @@ export default function HowDoesItWork({ location }: PageProps) {
         <Title order={3} color={colors.black}>
           Privatperson
         </Title>
-        <List style={{ listStyle: "none" }}>
+        <List style={{ listStyle: 'none' }}>
           <List.Item>
             <Text color={colors.black}>1 samtal 55 min 950 kr</Text>
           </List.Item>
@@ -92,17 +92,17 @@ export default function HowDoesItWork({ location }: PageProps) {
         </Text>
         <Space h="md" />
         <Text color={colors.black}>
-          Telefon:{" "}
+          Telefon:{' '}
           <a href={`tel:${phoneNr}`}>
-            <Text style={{ display: "inline" }} color={colors.black}>
+            <Text style={{ display: 'inline' }} color={colors.black}>
               {phoneNr}
             </Text>
           </a>
         </Text>
         <Text color={colors.black}>
-          Email:{" "}
+          Email:{' '}
           <a href={`mailto:${mail}`}>
-            <Text style={{ display: "inline" }} color={colors.black}>
+            <Text style={{ display: 'inline' }} color={colors.black}>
               {mail}
             </Text>
           </a>
@@ -128,5 +128,5 @@ export default function HowDoesItWork({ location }: PageProps) {
         </List> */}
       </Container>
     </Layout>
-  );
+  )
 }

@@ -5,15 +5,15 @@ import {
   Title,
   Text,
   Button,
-  SimpleGrid,
-} from "@mantine/core";
-import { HeadFC, Link } from "gatsby";
-import React from "react";
+  SimpleGrid
+} from '@mantine/core'
+import { type HeadFC, Link } from 'gatsby'
+import React from 'react'
 
 const useStyles = createStyles((theme) => ({
   root: {
     paddingTop: 80,
-    paddingBottom: 80,
+    paddingBottom: 80
   },
 
   title: {
@@ -22,41 +22,41 @@ const useStyles = createStyles((theme) => ({
     marginBottom: theme.spacing.md,
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
 
-    [theme.fn.smallerThan("sm")]: {
-      fontSize: 32,
-    },
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: 32
+    }
   },
 
   control: {
-    [theme.fn.smallerThan("sm")]: {
-      width: "100%",
-    },
+    [theme.fn.smallerThan('sm')]: {
+      width: '100%'
+    }
   },
 
   mobileImage: {
-    [theme.fn.largerThan("sm")]: {
-      display: "none",
-    },
+    [theme.fn.largerThan('sm')]: {
+      display: 'none'
+    }
   },
 
   desktopImage: {
-    [theme.fn.smallerThan("sm")]: {
-      display: "none",
-    },
-  },
-}));
+    [theme.fn.smallerThan('sm')]: {
+      display: 'none'
+    }
+  }
+}))
 
-function NotFoundPage() {
-  const { classes } = useStyles();
+function NotFoundPage (): JSX.Element {
+  const { classes } = useStyles()
 
   return (
     <Container className={classes.root}>
       <SimpleGrid
         spacing={80}
         cols={2}
-        breakpoints={[{ maxWidth: "sm", cols: 1, spacing: 40 }]}
+        breakpoints={[{ maxWidth: 'sm', cols: 1, spacing: 40 }]}
       >
-        <Image src={"/404-image.svg"} className={classes.mobileImage} />
+        <Image src={'/404-image.svg'} className={classes.mobileImage} />
         <div>
           <Title className={classes.title}>Something is not right...</Title>
           <Text color="dimmed" size="lg">
@@ -75,15 +75,15 @@ function NotFoundPage() {
             </Button>
           </Link>
         </div>
-        <Image src={"/404-image.svg"} className={classes.desktopImage} />
+        <Image src={'/404-image.svg'} className={classes.desktopImage} />
       </SimpleGrid>
     </Container>
-  );
+  )
 }
 
-export default NotFoundPage;
+export default NotFoundPage
 
-export const Head: HeadFC = () => <title>Not found</title>;
+export const Head: HeadFC = () => <title>Not found</title>
 
 // import * as React from "react"
 // import { Link, HeadFC, PageProps } from "gatsby"

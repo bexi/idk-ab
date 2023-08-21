@@ -1,10 +1,10 @@
-import React from "react";
-import Layout from "../components/layout/Layout";
-import { Container, Space, Text, Title } from "@mantine/core";
-import colors from "../styles/colors";
-import { PageProps } from "gatsby";
+import React from 'react'
+import Layout from '../components/layout/Layout'
+import { Container, Space, Text, Title } from '@mantine/core'
+import colors from '../styles/colors'
+import { type PageProps } from 'gatsby'
 
-export default function Prices({ location }: PageProps) {
+export default function Prices ({ location }: PageProps): JSX.Element {
   return (
     <Layout location={location}>
       <Container size="md">
@@ -29,5 +29,5 @@ export default function Prices({ location }: PageProps) {
         <Space h="md" />
       </Container>
     </Layout>
-  );
+  )
 }

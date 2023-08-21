@@ -1,13 +1,13 @@
-import React from "react";
-import Layout from "../components/layout/Layout";
-import { Container, Space, Text, Title } from "@mantine/core";
-import colors from "../styles/colors";
-import { PageProps } from "gatsby";
+import React from 'react'
+import Layout from '../components/layout/Layout'
+import { Container, Space, Text, Title } from '@mantine/core'
+import colors from '../styles/colors'
+import { type PageProps } from 'gatsby'
 
-export const phoneNr = "+46707410325";
-export const mail = "karin@idkab.org";
+export const phoneNr = '+46707410325'
+export const mail = 'karin@idkab.org'
 
-export default function Contact({ location }: PageProps) {
+export default function Contact ({ location }: PageProps): JSX.Element {
   return (
     <Layout location={location}>
       <Container size="md">
@@ -22,22 +22,22 @@ export default function Contact({ location }: PageProps) {
         </Text>
         <Space h="lg" />
         <Text color={colors.black}>
-          Telefon:{" "}
+          Telefon:{' '}
           <a href={`tel:${phoneNr}`}>
-            <Text style={{ display: "inline" }} color={colors.black}>
+            <Text style={{ display: 'inline' }} color={colors.black}>
               {phoneNr}
             </Text>
           </a>
         </Text>
         <Text color={colors.black}>
-          Email:{" "}
+          Email:{' '}
           <a href={`mailto:${mail}`}>
-            <Text style={{ display: "inline" }} color={colors.black}>
+            <Text style={{ display: 'inline' }} color={colors.black}>
               {mail}
             </Text>
           </a>
         </Text>
       </Container>
     </Layout>
-  );
+  )
 }

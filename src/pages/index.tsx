@@ -7,23 +7,23 @@ import {
   Space,
   Stack,
   Text,
-  Title,
-} from "@mantine/core";
-import React from "react";
-import Layout from "../components/layout/Layout";
-import colors from "../styles/colors";
-import { WindowLocation } from "@reach/router";
+  Title
+} from '@mantine/core'
+import React from 'react'
+import Layout from '../components/layout/Layout'
+import colors from '../styles/colors'
+import { type WindowLocation } from '@reach/router'
 
-export type PageProps = { location: WindowLocation };
+export interface PageProps { location: WindowLocation }
 
-export default function Home({ location }: PageProps) {
+export default function Home ({ location }: PageProps): JSX.Element {
   return (
     <Layout location={location}>
       <Container size="lg">
         <SimpleGrid
           cols={2}
           spacing="md"
-          breakpoints={[{ maxWidth: "sm", cols: 1 }]}
+          breakpoints={[{ maxWidth: 'sm', cols: 1 }]}
         >
           <Center>
             <Stack>
@@ -55,12 +55,12 @@ export default function Home({ location }: PageProps) {
           <img
             src="/flower2.png"
             alt="site banner"
-            style={{ maxWidth: "100%" }}
+            style={{ maxWidth: '100%' }}
           />
           <img
             src="/unravel2.png"
             alt="site banner"
-            style={{ maxWidth: "100%" }}
+            style={{ maxWidth: '100%' }}
           />
           <Center>
             <Stack>
@@ -125,16 +125,16 @@ export default function Home({ location }: PageProps) {
         <Paper shadow="xs" p="md">
           <Text fw={700}>Lena</Text>
           <Text>
-            "Samtalscoaching har hjälp mig att lyfta blicken när jag fastnat i
+          &quot;Samtalscoaching har hjälp mig att lyfta blicken när jag fastnat i
             tankemönster. Fått mig att kunna sätta svåra situationer i
-            perspektiv."
+            perspektiv.&quot;
           </Text>
         </Paper>
         <Space h="lg" />
         <Paper shadow="xs" p="md">
           <Text fw={700}>Anette</Text>
           <Text>
-            "Jag har nyligen haft möjligheten att arbeta med Karin som min
+          &quot;Jag har nyligen haft möjligheten att arbeta med Karin som min
             personliga coach, och det har varit en otroligt värdefull
             erfarenhet. När man står inför olika vägval, beslut eller utmaningar
             kan det vara svårt att sortera sina tankar. Karins trygga, lugna och
@@ -144,11 +144,11 @@ export default function Home({ location }: PageProps) {
             skapar en trygg och icke-dömande miljö för att effektivt utforska
             alla tankar och känslor. Kan starkt rekommendera Karins
             coachningstjänster till alla som söker klarhet, empowerment och
-            personlig tillväxt."
+            personlig tillväxt.&quot;
           </Text>
         </Paper>
         <Space h="xl" />
       </Container>
     </Layout>
-  );
+  )
 }
