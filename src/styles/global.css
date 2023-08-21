@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
 
 * {
   margin: 0;
@@ -7,15 +7,15 @@
   font-family: "Montserrat";
   color: white;
 }
-html, body {
+html,
+body {
   min-height: 100%;
 
   /* CSS HEX */
---black: #1d2124;
---blue-dark:  rgb(213, 220, 222);
---blue-light: rgb(213, 220, 222);
---blue-main: rgb(91, 139, 149);
-
+  --black: #1d2124;
+  --blue-dark: rgb(213, 220, 222);
+  --blue-light: rgb(213, 220, 222);
+  --blue-main: rgb(91, 139, 149);
 }
 body {
   /* background: radial-gradient(at top left, rgba(146,43,225,1) 0%, rgba(43,9,107,1) 100%); */

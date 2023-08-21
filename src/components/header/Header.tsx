@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   createStyles,
   Header as MantineHeader,
@@ -6,21 +6,21 @@ import {
   Group,
   Burger,
   Paper,
-  Transition
-} from '@mantine/core'
-import { useDisclosure } from '@mantine/hooks'
-import { Link } from 'gatsby'
-import colors from '../../styles/colors'
+  Transition,
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { Link } from "gatsby";
+import colors from "../../styles/colors";
 
-const HEADER_HEIGHT = 110
+const HEADER_HEIGHT = 110;
 
 const useStyles = createStyles((theme) => ({
   root: {
-    backgroundColor: colors.blueDark
+    backgroundColor: colors.blueDark,
   },
 
   dropdown: {
-    position: 'absolute',
+    position: "absolute",
     top: HEADER_HEIGHT,
     left: 0,
     right: 0,
@@ -28,74 +28,77 @@ const useStyles = createStyles((theme) => ({
     borderTopRightRadius: 0,
     borderTopLeftRadius: 0,
     borderTopWidth: 0,
-    overflow: 'hidden',
+    overflow: "hidden",
     backgroundColor: colors.blueDark,
 
-    [theme.fn.largerThan('sm')]: {
-      display: 'none'
-    }
+    [theme.fn.largerThan("sm")]: {
+      display: "none",
+    },
   },
 
   header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    height: '100%'
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    height: "100%",
   },
 
   links: {
-    [theme.fn.smallerThan('sm')]: {
-      display: 'none'
-    }
+    [theme.fn.smallerThan("sm")]: {
+      display: "none",
+    },
   },
 
   burger: {
-    [theme.fn.largerThan('sm')]: {
-      display: 'none'
-    }
+    [theme.fn.largerThan("sm")]: {
+      display: "none",
+    },
   },
 
   link: {
-    display: 'block',
+    display: "block",
     lineHeight: 1,
-    padding: '8px 12px',
+    padding: "8px 12px",
     borderRadius: theme.radius.sm,
-    textDecoration: 'none',
+    textDecoration: "none",
     color: colors.blueMain,
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
-    '&:hover': {
+    "&:hover": {
       backgroundColor: colors.blueMain,
-      color: theme.colors.gray[7]
+      color: theme.colors.gray[7],
     },
 
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan("sm")]: {
       borderRadius: 0,
-      padding: theme.spacing.md
-    }
+      padding: theme.spacing.md,
+    },
   },
 
   linkActive: {
-    '&, &:hover': {
+    "&, &:hover": {
       backgroundColor: colors.blueMain,
-      color: theme.colors.gray[7]
-    }
-  }
-}))
+      color: theme.colors.gray[7],
+    },
+  },
+}));
 
 interface HeaderResponsiveProps {
   links: Array<{
-    link: string
-    label: string
-    links?: Array<{ link: string, label: string }>
-  }>
-  activePath?: string
+    link: string;
+    label: string;
+    links?: Array<{ link: string; label: string }>;
+  }>;
+  activePath?: string;
 }
 
-export function Header ({ links, activePath }: HeaderResponsiveProps): JSX.Element {
-  const [opened, { toggle }] = useDisclosure(false)
-  const { classes, cx } = useStyles()
+export function Header({
+  links,
+  activePath,
+}: HeaderResponsiveProps): JSX.Element {
+  const [opened, { toggle }] = useDisclosure(false);
+  const { classes, cx } = useStyles();
 
   // const data = useStaticQuery(graphql`
   //   query HeaderQuery {
@@ -114,24 +117,24 @@ export function Header ({ links, activePath }: HeaderResponsiveProps): JSX.Eleme
         key={link.label}
         to={link.link}
         className={cx(classes.link, {
-          [classes.linkActive]: activePath === link.link
+          [classes.linkActive]: activePath === link.link,
         })}
       >
         {link.label}
       </Link>
-    )
-  })
+    );
+  });
 
   return (
     <MantineHeader height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
         <Link to="/">
-          <div style={{ height: '70px' }}>
+          <div style={{ height: "70px" }}>
             <img
               style={{
-                maxWidth: '100%',
-                maxHeight: '100%',
-                objectFit: 'contain'
+                maxWidth: "100%",
+                maxHeight: "100%",
+                objectFit: "contain",
               }}
               src="/I.D.K_clear_cut.png"
             />
@@ -155,5 +158,5 @@ export function Header ({ links, activePath }: HeaderResponsiveProps): JSX.Eleme
         </Transition>
       </Container>
     </MantineHeader>
-  )
+  );
 }

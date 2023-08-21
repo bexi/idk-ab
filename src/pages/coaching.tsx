@@ -1,12 +1,12 @@
-import React from 'react'
-import Layout from '../components/layout/Layout'
-import { Anchor, Container, Space, Text, Title } from '@mantine/core'
-import colors from '../styles/colors'
-import { type PageProps } from 'gatsby'
+import React from "react";
+import Layout from "../components/layout/Layout";
+import { Anchor, Container, Space, Text, Title } from "@mantine/core";
+import colors from "../styles/colors";
+import { type PageProps } from "gatsby";
 
-export const phoneNr = '+46707410325'
+export const phoneNr = "+46707410325";
 
-export default function Coaching ({ location }: PageProps): JSX.Element {
+export default function Coaching({ location }: PageProps): JSX.Element {
   return (
     <Layout location={location}>
       <Container size="md">
@@ -45,5 +45,5 @@ export default function Coaching ({ location }: PageProps): JSX.Element {
         </Anchor>
       </Container>
     </Layout>
-  )
+  );
 }

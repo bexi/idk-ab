@@ -1,5 +1,5 @@
-import React from 'react'
-import Layout from '../components/layout/Layout'
+import React from "react";
+import Layout from "../components/layout/Layout";
 import {
   Anchor,
   Center,
@@ -8,12 +8,12 @@ import {
   Space,
   Text,
   Title,
-  MediaQuery
-} from '@mantine/core'
-import colors from '../styles/colors'
-import { type PageProps, Script } from 'gatsby'
+  MediaQuery,
+} from "@mantine/core";
+import colors from "../styles/colors";
+import { type PageProps, Script } from "gatsby";
 
-export default function Contact ({ location }: PageProps): JSX.Element {
+export default function Contact({ location }: PageProps): JSX.Element {
   return (
     <Layout location={location}>
       <Container size="md">
@@ -21,7 +21,7 @@ export default function Contact ({ location }: PageProps): JSX.Element {
           Om I.D.K AB
         </Title>
         <Space h="md" />
-        <MediaQuery largerThan="sm" styles={{ flexWrap: 'nowrap' }}>
+        <MediaQuery largerThan="sm" styles={{ flexWrap: "nowrap" }}>
           <Group>
             <Container px={0}>
               <Text color={colors.black}>
@@ -39,9 +39,9 @@ export default function Contact ({ location }: PageProps): JSX.Element {
               </Text>
               <Space h="md" />
               <Text color={colors.black}>
-              &quot;Mitt intresse för personlig utveckling i form av coaching ledde
-                mig 2020 till Gothia Akademi och tre terminer studier med fokus
-                på Katalyserande coaching och Förändringsledning. Jag är
+                &quot;Mitt intresse för personlig utveckling i form av coaching
+                ledde mig 2020 till Gothia Akademi och tre terminer studier med
+                fokus på Katalyserande coaching och Förändringsledning. Jag är
                 Diplomerad Professionell Coach och Certifierad Förändringsledare
                 och arbetar enlig riktlinjerna satta av International Coach
                 Federation (ICF). Som bevis på min erfarenhet och kunskap
@@ -52,7 +52,7 @@ export default function Contact ({ location }: PageProps): JSX.Element {
             <img
               src="/karin_jannerborn_profil.jpg"
               alt="karin"
-              style={{ maxWidth: '100%' }}
+              style={{ maxWidth: "100%" }}
             />
           </Group>
         </MediaQuery>
@@ -62,13 +62,13 @@ export default function Contact ({ location }: PageProps): JSX.Element {
         </Title>
         <Space h="md" />
         <Text color={colors.black}>
-        &quot;Min filosofi är att vi utvecklas som individer hela livet och om vi
-          aktivt tar ansvar för den utvecklingen kan vi nå hur långt som helst.
-          Som coach är mitt fokus att du ska nå din fulla potential genom att ta
-          kontrollen över ditt liv, bli den du vill vara och nå dina mål! Som
-          min klient kan du förvänta dig att jag med lyhördhet och stort hjärta
-          utmanar dig att ta de steg som du behöver för att göra den förändring
-          du vill få till.&quot;
+          &quot;Min filosofi är att vi utvecklas som individer hela livet och om
+          vi aktivt tar ansvar för den utvecklingen kan vi nå hur långt som
+          helst. Som coach är mitt fokus att du ska nå din fulla potential genom
+          att ta kontrollen över ditt liv, bli den du vill vara och nå dina mål!
+          Som min klient kan du förvänta dig att jag med lyhördhet och stort
+          hjärta utmanar dig att ta de steg som du behöver för att göra den
+          förändring du vill få till.&quot;
         </Text>
         <Space h="md" />
 
@@ -78,7 +78,7 @@ export default function Contact ({ location }: PageProps): JSX.Element {
         <Space h="md" />
         <Text color={colors.black}>
           En ICF certifierad coach garanterar kvalitet och seriositet. Läs gärna
-          mer om ICF på deras{' '}
+          mer om ICF på deras{" "}
           <Anchor href="https://coachingfederation.se/" target="_blank">
             hemsida
           </Anchor>
@@ -91,7 +91,7 @@ export default function Contact ({ location }: PageProps): JSX.Element {
           async
           src="//cdn.credly.com/assets/utilities/embed.js"
         />
-        <Center style={{ flexWrap: 'wrap', justifyContent: 'space-around' }}>
+        <Center style={{ flexWrap: "wrap", justifyContent: "space-around" }}>
           {/* certificates */}
           <div
             data-iframe-width="300"
@@ -108,5 +108,5 @@ export default function Contact ({ location }: PageProps): JSX.Element {
         </Center>
       </Container>
     </Layout>
-  )
+  );
 }
